@@ -1,0 +1,25 @@
+<stack>
+  <description brief="human_detection_and_tracking_system">
+		Human detection and tracking system created for my bachelor thesis.
+
+		System is based on ROS - Robot Operating System, mobile
+		robot IRobot Roomba and RGBD sensor Kinect. For human detection we
+		first use the depth information of the Kinect and HOG algorithm for the
+		initial classication. For re-detection, algorithm narrows search window and
+		then for classication, resorts to more robust online Adaboost algorithm with
+		Haar features. For cases where we do not positively classify or lose the human
+		we use predictions of the Kalman filter. For robot navigation we used ROS
+		navigation stack.
+	</description>
+  <author>Grega Pusnik</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/diploma</url>
+  <depend stack="common_msgs" /> <!-- sensor_msgs, visualization_msgs -->
+  <depend stack="image_common" /> <!-- image_transport -->
+  <depend stack="pcl" />
+  <depend stack="pcl_ros" /> 
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- rospy, std_msgs, roscpp -->
+  <depend stack="vision_opencv" /> <!-- opencv2, image_geometry, cv_bridge -->
+</stack>

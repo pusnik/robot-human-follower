@@ -1,0 +1,67 @@
+Background\ ColorR=0
+Background\ ColorG=0
+Background\ ColorB=0
+Fixed\ Frame=/odom
+Target\ Frame=<Fixed Frame>
+Grid.Alpha=0.5
+Grid.Cell\ Size=1
+Grid.ColorR=0.5
+Grid.ColorG=0.5
+Grid.ColorB=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=10
+Grid.Reference\ Frame=<Fixed Frame>
+Inflated\ Obstacles.Alpha=1
+Inflated\ Obstacles.ColorR=0.00392157
+Inflated\ Obstacles.ColorG=0.729412
+Inflated\ Obstacles.ColorB=1
+Inflated\ Obstacles.Enabled=1
+Inflated\ Obstacles.Topic=/move_base/local_costmap/inflated_obstacles
+Marker.=1
+Marker.Enabled=1
+Marker.Marker\ Topic=/markers
+Path.Alpha=1
+Path.ColorR=0.1
+Path.ColorG=1
+Path.ColorB=0
+Path.Enabled=1
+Path.Topic=/move_base/TrajectoryPlannerROS/global_plan
+Robot\ Model.Alpha=1
+Robot\ Model.Collision\ Enabled=0
+Robot\ Model.Enabled=1
+Robot\ Model.Robot\ Description=robot_description
+Robot\ Model.TF\ Prefix=
+Robot\ Model.Update\ Interval=0
+Robot\ Model.Visual\ Enabled=1
+Tool\ 2D\ Nav\ GoalTopic=move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+Camera\ Type=rviz::FixedOrientationOrthoViewController
+Camera\ Config=51.6443 0.427002 15.0561 -0.291917 -0.493913 -0.506014 -0.506014 0.493913
+Property\ Grid\ State=selection=Fixed Frame;expanded=.Global Options,Marker.Enabled.Marker.Namespaces;scrollpos=0,0;splitterpos=275,551;ispageselected=1
+[Display0]
+Name=Grid
+Package=rviz
+ClassName=rviz::GridDisplay
+[Display1]
+Name=Path
+Package=rviz
+ClassName=rviz::PathDisplay
+[Display2]
+Name=Inflated Obstacles
+Package=rviz
+ClassName=rviz::GridCellsDisplay
+[Display3]
+Name=Marker
+Package=rviz
+ClassName=rviz::MarkerDisplay
+[Display4]
+Name=Robot Model
+Package=rviz
+ClassName=rviz::RobotModelDisplay
