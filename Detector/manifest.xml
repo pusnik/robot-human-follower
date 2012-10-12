@@ -1,0 +1,33 @@
+<package>
+  <description brief="Detector">
+
+     Package that detects human and publishes coordinates of detected human
+
+  </description>
+  <author>Grega Pusnik</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/diploma</url>
+	<depend package="tf"/>
+  <depend package="std_msgs"/>
+	<depend package="nodelet"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="pcl"/>
+	<depend package="pcl_ros"/>
+  <depend package="sensor_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="opencv2"/>
+	<depend package="cv_bridge"/>
+  <depend package="image_transport"/>
+	<depend package="image_geometry"/>
+	<depend package="move_base_msgs"/>
+	<depend package="nav_msgs"/>
+ 
+  <export>
+  	<nodelet plugin="${prefix}/nodelet_plugins.xml" />
+	</export>
+
+</package>
+
+

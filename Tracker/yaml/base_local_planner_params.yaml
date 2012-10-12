@@ -1,0 +1,33 @@
+# We need to use a lower controller frequency. Otherwise we seem to
+# run into buffering problems in rosserial.
+# controller_frequency: 10
+base_local_planner: dwa_local_planner/DWAPlannerROS
+
+DWAPlannerROS:
+  acc_lim_th: 4.5
+  acc_lim_x: 0.3
+  acc_lim_y: 0.0
+  max_trans_vel: 0.35
+  min_trans_vel: 0.10
+  max_vel_x: 0.35
+  min_vel_x: 0.10
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+  max_rot_vel: 1.0
+  min_rot_vel: 0.2
+  # These are guessed tolerance values. Yaw tolerance should be about
+  # 45 degree and xy tolerance within a foot.
+  yaw_goal_tolerance: 0.2  # radians
+  xy_goal_tolerance: 0.2  # meters We increase the stop_time_buffer
+  # because we have a pretty high latency on the controller. A small
+  # stop_time_buffer would cause the robot to crash into obstacles
+  # more often.
+  stop_time_buffer: 1.5
+  # Lower the path_distance_bias to make the robot not follow the path
+  # too strictly and avoid spinning in place when gmapping causes
+  # jumsp in the robot's pose.
+  path_distance_bias: 4.5
+  goal_distance_bias: 5
+  occdist_scale: 0.02
+  sim_time: 2.0
+  

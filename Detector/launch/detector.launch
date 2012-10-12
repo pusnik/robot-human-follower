@@ -1,0 +1,34 @@
+<launch>
+	 <param name="/use_sim_time" value="True" /> 
+  
+
+	<include file="$(find openni_launch)/launch/openni.launch" />
+	<node pkg="nodelet" type="nodelet" name="standalone_nodelet"  args="manager" output="screen"/>
+  <node pkg="nodelet" type="nodelet" name="Detection_Tracking" args="load Detector/Detection_Tracking standalone_nodelet" output="screen">
+			<param name = "downsample_leaf_size" type="double" value = "0.06" />
+			<param name = "ransac_max_iterations" type="int" value = "250" />
+			<param name = "ransac_distance_threshold" type="double" value = "0.06" />
+			<param name = "cluster_tolerance" type="double" value = "0.12" />
+			<param name = "cluster_min_size" type="int" value = "200" />
+			<param name = "cluster_max_size" type="int" value = "600" />
+			<param name = "max_allowed_cluster_depth" type="double" value = "6.5" />
+			<param name = "max_allowed_cluster_height" type="double" value = "2.0" />
+			<param name = "min_allowed_cluster_height" type="double" value = "1.4" />
+			<param name = "area_x" type="double" value = "0.30" />
+			<param name = "area_y" type="double" value = "0.30" />
+			<param name = "area_z" type="double" value = "0.10" />
+
+			<param name = "hog_threshold" type="double" value = "-1.0" />
+			<param name = "publish_blobs" type="bool" value = "true" />
+			<param name = "publish_clusters" type="bool" value = "false" />
+	</node>
+	<node pkg="nodelet" type="nodelet" name="Tracking" args="load Tracker/Tracking standalone_nodelet" output="screen" />
+  
+
+	 <node name="gazebo" pkg="gazebo" type="gazebo" 
+          args="$(find gazebo_worlds)/worlds/empty.world" output="screen" respawn="false" />
+	 <include file="$(find irobot_create_description)/launch/create_mobile_base.launch" />
+</launch>
+
+
+

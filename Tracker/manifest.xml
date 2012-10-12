@@ -1,0 +1,33 @@
+<package>
+  <description brief="Tracker1">
+
+     Tracker
+
+  </description>
+  <author>Grega</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Tracker</url>
+	<depend package="tf"/>
+	<depend package="std_msgs"/>
+	<depend package="nodelet"/>
+  <depend package="roscpp"/>
+	<depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="sensor_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="opencv2"/>
+	<depend package="cv_bridge"/>
+  <depend package="image_transport"/>
+	<depend package="image_geometry"/>
+	<depend package="nav_msgs"/>
+	<depend package="bayes_filter_ros"/>
+	<depend package="Detector"/>
+	<depend package="move_base_msgs"/>	  
+	<depend package="actionlib"/>	  
+  <export>
+  	<nodelet plugin="${prefix}/nodelet_plugins.xml" />
+	</export>
+</package>
+
+

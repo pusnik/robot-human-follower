@@ -1,0 +1,16 @@
+<package>
+  <description brief="valerija_description">
+
+     valerija_description provides a complete 3D model of the ValerijaBot for simulation and visualization
+
+  </description>
+  <author>Grega</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/valerija_description</url>
+  <depend package="urdf"/>
+  <depend package="xacro"/>
+
+</package>
+
+

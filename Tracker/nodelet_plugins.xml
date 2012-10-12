@@ -1,0 +1,7 @@
+<library path="lib/libTracker">
+  <class name="Tracker/Tracking" type="Tracker::Tracking" base_class_type="nodelet::Nodelet">
+  <description>
+  Tracking nodelet.
+  </description>
+  </class>
+</library>

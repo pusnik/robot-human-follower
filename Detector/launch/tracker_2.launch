@@ -1,0 +1,25 @@
+<launch>
+	<include file="$(find openni_launch)/launch/openni.launch" />
+
+  <node pkg="Detector" type="Detector" name="Detector" output="screen">
+			<param name = "downsample_leaf_size" type="double" value = "0.06" />
+			<param name = "ransac_max_iterations" type="int" value = "250" />
+			<param name = "ransac_distance_threshold" type="double" value = "0.06" />
+			<param name = "cluster_tolerance" type="double" value = "0.12" />
+			<param name = "cluster_min_size" type="int" value = "200" />
+			<param name = "cluster_max_size" type="int" value = "600" />
+			<param name = "max_allowed_cluster_depth" type="double" value = "6.5" />
+			<param name = "max_allowed_cluster_height" type="double" value = "2.0" />
+			<param name = "min_allowed_cluster_height" type="double" value = "1.4" />
+			<param name = "area_x" type="double" value = "0.15" />
+			<param name = "area_y" type="double" value = "0.15" />
+			<param name = "area_z" type="double" value = "0.30" />
+			<param name = "hog_threshold" type="double" value = "-1.0" />
+		
+			<param name = "publish_blobs" type="bool" value = "true" />
+			<param name = "publish_clusters" type="bool" value = "false" />
+	</node>  
+</launch>
+
+
+

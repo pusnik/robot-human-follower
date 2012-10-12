@@ -1,0 +1,10 @@
+geometry_msgs/Vector3 						topFrontLeft
+geometry_msgs/Vector3 						topFrontRight1
+geometry_msgs/Vector3 						topBackRight
+geometry_msgs/Vector3 						topBackLeft
+
+geometry_msgs/Vector3 						bottomFrontLeft
+geometry_msgs/Vector3 						bottomFrontRight
+geometry_msgs/Vector3 						bottomBackRight
+geometry_msgs/Vector3 						bottomBackLeft
+

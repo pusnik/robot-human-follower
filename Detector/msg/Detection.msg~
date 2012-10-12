@@ -1,0 +1,18 @@
+visualization_msgs/Marker 				box
+
+geometry_msgs/Vector3 						centroid
+
+float32 													height
+float64 													confidence
+float32 													distance
+
+bool 															occluded
+sensor_msgs/Image 								blob
+sensor_msgs/Image 						    image
+
+Header 												    header
+sensor_msgs/PointCloud2 					cluster
+Header 												    header
+Detection[] 									    detections
+
+

@@ -1,0 +1,34 @@
+<launch>
+ 		<node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="Detection_Tracking" args="load Detector/Detection_Tracking standalone_nodelet" output="screen">
+			<param name = "downsample_leaf_size" type="double" value = "0.06" />
+			<param name = "ransac_max_iterations" type="int" value = "250" />
+			<param name = "ransac_distance_threshold" type="double" value = "0.06" />
+			<param name = "cluster_tolerance" type="double" value = "0.12" />
+			<param name = "cluster_min_size" type="int" value = "100" />
+			<param name = "cluster_max_size" type="int" value = "900" />
+			<param name = "max_allowed_cluster_depth" type="double" value = "4.0" />
+			<param name = "min_allowed_cluster_depth" type="double" value = "1.2" />
+			<param name = "max_allowed_cluster_height" type="double" value = "1.90" />
+			<param name = "min_allowed_cluster_height" type="double" value = "1.50" />
+			<param name = "max_allowed_cluster_width" type="double" value = "0.9" />
+			<param name = "min_allowed_cluster_width" type="double" value = "0.5" />
+			<param name = "area_x" type="double" value = "0.50" />
+			<param name = "area_y" type="double" value = "0.30" />
+			<param name = "area_z" type="double" value = "0.30" />
+			<param name = "hog_threshold" type="double" value = "-1.0" />
+			<param name = "adaboost_threshold" type="double" value = "-6.0" />
+			<param name = "adaboost_search_area" type="double" value = "3.0" />
+
+			<param name = "adaboost_init_steps" type="double" value = "50.0" />
+			<param name = "adaboost_num_base_class" type="double" value = "100" />
+
+			<param name = "publish_blobs" type="bool" value = "true" />
+			<param name = "publish_clusters" type="bool" value = "true" />
+	</node>
+	<node pkg="nodelet" type="nodelet" name="Tracking" args="load Tracker/Tracking standalone_nodelet"/>
+	 
+</launch>
+
+
+

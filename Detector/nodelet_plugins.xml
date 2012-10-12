@@ -1,0 +1,7 @@
+<library path="lib/libDetector">
+  <class name="Detector/Detection_Tracking" type="Detector::Detection_Tracking" base_class_type="nodelet::Nodelet">
+  <description>
+  This is my nodelet.
+  </description>
+  </class>
+</library>
